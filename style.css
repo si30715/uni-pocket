@@ -1,0 +1,160 @@
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: #b99a73;
+    font-family: "Caveat Brush", cursive;
+}
+
+/* Corkboard */
+.categories {
+    width: min(100%, 613px);
+    aspect-ratio: 613 / 887;
+    margin: 0 auto;
+
+    background-image: url("images/IMG_0189.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+    column-gap: 5%;
+    row-gap: 3%;
+
+    padding: 13% 4% 4%;
+    box-sizing: border-box;
+}
+
+/* Category text */
+.categories button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+
+    font-family: "Caveat Brush", cursive;
+    font-size: clamp(14px, 3vw, 24px);
+    color: #5c493b;
+    font-weight: normal;
+    text-align: center;
+
+    padding: 12px;
+    transition: transform 0.2s;
+}
+
+.categories button:hover {
+    transform: scale(1.06);
+}
+
+/* Popup card */
+dialog {
+    width: min(80%, 400px);
+    border: none;
+    border-radius: 20px;
+    padding: 30px;
+    background: #fff0d1;
+    box-shadow: 0 5px 30px #0003;
+    font-family: "Caveat Brush", cursive;
+    color: #5c493b;
+}
+
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+
+/* Close Button */
+dialog {
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+
+    width: 35px;
+    height: 35px;
+
+    background: url("images/被写体 3.png") center / contain no-repeat;
+    border: none;
+    cursor: pointer;
+
+    padding: 0;
+
+    transform: rotate(5deg);
+}
+
+.close-btn:hover {
+    transform: scale(1.1);
+}
+
+
+
+#links a {
+    display: block;
+    padding: 15px;
+    margin: 10px 0;
+    background: #fff9ec;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #5c493b;
+    font-size: 20px;
+}
+
+#links a:hover {
+    background: #f6dfb6;
+}
+
+
+
+/* 1. Course Registration */
+.categories button:nth-child(1) {
+    font-size: 25px;
+    translate: 0px 25px;
+}
+
+/* 2. Uni Life */
+.categories button:nth-child(2) {
+    font-size: 24px;
+    translate: 0px 15px;
+}
+
+/* 3. Credit */
+.categories button:nth-child(3) {
+    font-size: 28px;
+    translate: -5px 10px;
+}
+
+/* 4. Uni Facilities */
+.categories button:nth-child(4) {
+    font-size: 25px;
+    translate: 0px 10px;
+}
+
+/* 5. Government */
+.categories button:nth-child(5) {
+    font-size: 28px;
+    translate: -3px 5px;
+}
+
+/* 6. Transportation */
+.categories button:nth-child(6) {
+    font-size: 24px;
+    translate: 0px 0px;
+}
+
+
+/* Mobile */
+@media (max-width: 500px) {
+    .categories button {
+        font-size: 15px;
+        padding: 5px;
+    }
+
+    dialog {
+        width: 80%;
+        padding: 20px;
+    }
+}
